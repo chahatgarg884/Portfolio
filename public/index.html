@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Typing effect with HTML, CSS and Vanilla JavaScript....">
+  <title>Bootstrap demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="style/home.css">
+  <link rel="stylesheet" href="style/about-me.css">
+  <link rel="stylesheet" href="style/skill.css">
+  <link rel="stylesheet" href="style/projects.css">
+  <link rel="stylesheet" href="style/contact.css">
+
+
+
+</head>
+<script>
+  $(document).ready(function () {
+    $("#rbtn").click(function () {
+
+
+
+      var emailku = $("#txtEmail").val();
+      var nameku = $("#txtName").val();
+      var numberku = $("#txtNumber").val();
+      var subjectku = $("#txtSubject").val();
+      var messageku = $("#txtMessage").val();
+      var obj = {
+        type: "get",
+        url: "/do-submit",
+        data: {
+          kuchemail: emailku,
+          kuchname: nameku,
+          kuchnumber: numberku,
+          kuchsubject: subjectku,
+          kuchmessage: messageku
+        }
+      }
+      $.ajax(obj).done(function (respkuch1) {
+
+        //  alert(respkuch);
+        $("#rbtn-submit").html(respkuch1);
+      }).fail(function (errkuch1) {
+        // alert(errkuch);
+        $("#rbtn-submit").html(errkuch1);
+      })
+
+
+    });
+  })
+</script>
+
+<body>
+
+  <!-- /////////         NAVBAR         //////////// -->
+
+  <nav class="navbar navbar-expand-lg navbar-fixed-top " id="nav1" style="height: 60px;background-color: #11111d;">
+    <div class="container-fluid">
+      <a class="navbar-brand " style="margin-left: 100px;color: white;"><b>Portfolio</b></a>
+
+      <div class="collapse navbar-collapse " id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="rdesign">
+          <li class="nav-item page" id="home">
+            <a class="nav-link active " aria-current="page" href="#home1" id="stylepage">Home</a>
+          </li>
+          <li class="nav-item page ">
+            <a class="nav-link active " aria-current="page" href="#aboutme" id="stylepage">About Me</a>
+          </li>
+          <li class="nav-item page ">
+            <a class="nav-link active " aria-current="page" href="#skill" id="stylepage">Skills</a>
+          </li>
+          <li class="nav-item page ">
+            <a class="nav-link active " aria-current="page" href="#project" id="stylepage">Projects</a>
+          </li>
+          <li class="nav-item page ">
+            <a class="nav-link active " aria-current="page" href="#contact" id="stylepage">Contact Me</a>
+          </li>
+
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+
+  <!-- ///////////////          HOME               ////////////////// -->
+
+  <div class="container" style="height: 800px;" id="home1">
+    <div class="row" style="margin-top: 150px;">
+      <div class="col-md-1">
+
+      </div>
+      <div class="col-md-4">
+        <b>
+          <h2 style="font-weight: bold;">Hello,it's Me </h2>
+        </b>
+        <b>
+          <h1 style="font-size: 60px; font-weight: bold;">Chahat Garg</h1>
+        </b>
+        <div class="maintext">
+
+
+          <!-- <h2 >And I'm a </h2> -->
+          <h1 style="width: 500px;">And I'm <span style="color: #00e7ff;" class="auto-input"></span> </h1>
+
+          <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+          <script>
+            let typed = new Typed(".auto-input", {
+              strings: ["Web Developer"],
+              typeSpeed: 100,
+              backSpeed: 100,
+              loop: true
+            })
+          </script>
+          <br>
+          <h6>Code with Precision, Design with Passion: Elevating Web Experiences!</h6>
+
+          <ul id="smbtn">
+            <li>
+              <a href="https://instagram.com/chahatgarg884?igshid=MzNlNGNkZWQ4Mg==">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/chahat-garg-146a9224b">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/chahatgarg884">
+                <i class="fab fa-github"></i>
+              </a>
+
+            </li>
+            <li>
+              <a href="https://twitter.com/ChahatGarg884?t=FoZJZ_geXyfs-zkQOPNpuw&s=09">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+
+
+      </div>
+      <div class="col-md-6">
+        <img src="pics/homepic.png" style="margin-left: 150px ;margin-top: -50px;" alt="">
+      </div>
+
+
+
+
+    </div>
+  </div>
+
+  <!-- ///////////////////         ABOUT ME         /////////////// -->
+
+  <div style="background-color: #171723; height: 800px;" id="aboutme">
+    <div class="container">
+      <div class="row" style="margin-top: 250px;">
+
+        <div class="col-md-6">
+          <img src="pics/about-pic (2).png" style="margin-left: -50px ;margin-top: -100px;" alt="">
+        </div>
+        <div class="col-md-4">
+          <h1> <b>About <span style="color: #00e7ff;"> Me </span></b></h1>
+          <h4>Full-Stack Web Developer !</h4>
+          <p style="width: 500px;">Welcome to my portfolio! I'm Chahat Garg, a Full-stack web developer with a
+            passion for creativity and problem-solving. <br>
+            I have completed my schooling from D.A.V. school and
+            currently, I'm a Second year Computer engineering student at Thapar Institue of Engineering and Technology.
+            <br>
+            My goal is to come out of my comfort zone and explore as many things as I can.
+            I am a driven and hardworking individual, constantly seeking new challenges and opportunities to grow both
+            personally and professionally."<br>
+            Beyond Work, I also like to play badminton or watching movies in free time.
+          </p>
+          <!-- <a href="#" id="rmbtn">
+            Read More
+          </a> -->
+        </div>
+        <div class="col-md-2"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ////////////      SKILLS          ///////////////////// -->
+
+  <div style="height: 800px;" id="skill">
+    <div class="container">
+      <div class="row" style="margin-top: 200px;">
+        <!-- <div class="col-md-2"></div> -->
+
+        <div class="col-md-6" style="border: 2px solid black; box-shadow: 0px 0px 30px black;">
+          <center>
+            <h1>Technical Skills</h1>
+          </center><br>
+          <p>HTML</p>
+          <div class="progress" style="border-radius: 20px; " role="progressbar" aria-label="Example with label"
+            aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar" style="width: 100%; background-color: #00e7ff; color: #171723;">100%</div>
+          </div>
+          <br>
+          <p>CSS</p>
+          <div class="progress" style="border-radius: 20px; " role="progressbar" aria-label="Example with label"
+            aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar" style="width: 95%; background-color: #00e7ff; color: #171723;">95%</div>
+          </div>
+          <br>
+          <p>JavaScript</p>
+          <div class="progress" style="border-radius: 20px; " role="progressbar" aria-label="Example with label"
+            aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar" style="width: 80%; background-color: #00e7ff; color: #171723;">80%</div>
+          </div>
+          <br>
+          <p>Sql Server</p>
+          <div class="progress" style="border-radius: 20px; " role="progressbar" aria-label="Example with label"
+            aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar" style="width: 70%; background-color: #00e7ff; color: #171723;">70%</div>
+          </div>
+        </div>
+        <div class="col-md-2"></div>
+        <div class="col-md-4">
+          <center>
+            <h1>Professional Skills</h1>
+          </center><br>
+          <div class="row">
+            <div class="col-xs-6 col-sm-3">
+              <div class="inner-content text-center">
+
+                <div class="c100 p2 center">
+                  <span>80%</span>
+                  <div class="slice">
+                    <div class="bar"></div>
+                    <div class="fill"></div>
+                  </div>
+                </div>
+
+                <p style="width: 150px; margin:5px 0px 0px -10px ;"><em>Web Development</em></p>
+
+              </div>
+            </div><!-- /.col -->
+
+            <div class="col-xs-6 col-sm-3" style="margin-left: 100px;">
+              <div class="inner-content text-center">
+
+                <div class="c100 p1 center">
+                  <span>60%</span>
+                  <div class="slice">
+                    <div class="bar"></div>
+                    <div class="fill"></div>
+                  </div>
+                </div>
+
+                <p style="width: 150px; margin:5px 0px 0px -10px ;"><em>Problem Solving</em></p>
+
+
+              </div>
+            </div><!-- /.col -->
+          </div>
+
+            <div class="row mt-5">
+              <div class="col-xs-6 col-sm-3">
+                <div class="inner-content text-center">
+
+                  <div class="c100 p3 center">
+                    <span>55%</span>
+                    <div class="slice">
+                      <div class="bar"></div>
+                      <div class="fill"></div>
+                    </div>
+                  </div>
+
+                  <p style="width: 150px; margin:5px 0px 0px -10px ;"><em>Communication</em></p>
+
+
+                </div>
+              </div><!-- /.col -->
+
+              <div class="col-xs-6 col-sm-3" style="margin-left: 100px;">
+                <div class="inner-content text-center">
+
+                  <div class="c100 p4 center">
+                    <span>60%</span>
+                    <div class="slice">
+                      <div class="bar"></div>
+                      <div class="fill"></div>
+                    </div>
+                  </div>
+
+                  <p style="width: 150px; margin:5px 0px 0px -10px ;"><em>Designing</em></p>
+
+
+                </div>
+              </div><!-- /.col -->
+
+
+            </div>
+          
+        </div>
+
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- ///////////////         PROJECTS                ///////////////// -->
+
+  <div style="height: 800px; background-color: #171723;" id="project">
+
+    <div class="container">
+      <center>
+        <div class="row">
+          <center style="margin-bottom: -200px;margin-top: 150px;">
+            <h1 style="font-weight: bolder;">My <span style="color: #00e7ff;"> Projects </span></h1>
+          </center>
+        </div>
+
+        <div class="row" style="margin-top: 250px;">
+          <div class="col-md-2"></div>
+          <div class="col-md-4">
+            <div class="card c" style="width: 300px;">
+              <img src="pics/bgtic-tac-toe2.jpg" height="200px" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h4 class="card-title">Tic-Tac-Toe</h4>
+                <p class="card-text"> a classic game of X's and O's, challenges players to outwit each other on a 3x3
+                  grid, aiming to form a winning line. Its simplicity belies a timeless allure that transcends
+                  generations.</p>
+                <a href="http://tic-tac-toe.infinityfreeapp.com/" id="rmbtn">
+                  View
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card c" style="width: 300px;">
+              <img src="pics/MedCare.png" height="200px" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h4 class="card-title">MedCare</h4>
+                <p class="card-text">It is a medicine donation website which connects two category of people i.e
+                  <b>Donor</b> and <b>Needy</b>, this website is very helful for those people who can't afford
+                  medicines. <br><br>
+                </p>
+                <a href="#" id="rmbtn">
+                  View
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2"></div>
+        </div>
+      </center>
+    </div>
+  </div>
+
+  <!-- ////////////          CONTACT                /////////////// -->
+
+  <div style="height: 700px;" id="contact">
+    <div class="container">
+
+
+
+      <div class="row">
+        <center style="margin-bottom: 60px; margin-top: 100px;">
+          <h1 style="font-weight: bolder;">Contact <span style="color: #00e7ff;"> Me </span></h1>
+        </center>
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+          <form id="contact-form" class="form-horizontal" role="form">
+
+            <div class="form-group">
+              <div class="col-sm-6">
+                <input type="text" class="form-control" id="txtName" placeholder="Name" name="txtName" value=""
+                  required>
+              </div>
+              <div class="col-sm-6">
+                <input type="email" class="form-control" id="txtEmail" placeholder="Email Address" name="txtEmail"
+                  value="" required>
+              </div>
+
+            </div>
+
+
+            <div class="form-group">
+              <div class="col-sm-6">
+                <input type="number" class="form-control" id="txtNumber" placeholder="Mobile Number" name="txtNumber"
+                  value="" required>
+              </div>
+              <div class="col-sm-6">
+                <input type="text" class="form-control" id="txtSubject" placeholder="Email Subject" name="txtSubject"
+                  value="" required>
+              </div>
+
+            </div>
+
+            <textarea class="form-control" rows="10" placeholder="Your Message" name="txtMessage" id="txtMessage"
+              required></textarea>
+
+            <center>
+              <input type="button" value="Send Message" id="rbtn" style="border: 2px solid #00e7ff;">
+              <br><br>
+              <span id="rbtn-submit"></span>
+            </center>
+
+
+          </form>
+        </div>
+        <div class="col-md-3"></div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

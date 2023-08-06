@@ -1,0 +1,17 @@
+.c
+{
+    background-color: #11111d;
+    color: #00e7ff;
+    transition: ease all 1s;
+
+}
+.c:hover
+{
+    border: 2px solid #00e7ff;
+    transform: scale(1.1);
+    transition: ease all 1s;
+}
+img{
+    
+    border-radius: 5px;
+}

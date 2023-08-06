@@ -1,0 +1,57 @@
+#rmbtn {
+    /* position: relative; */
+    display: inline-block;
+    margin-top: 20px;
+    padding: 5px 10px;
+    color: #11111d;
+    /* text-transform: uppercase; */
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-decoration: none;
+    font-size: 20px;
+    overflow: hidden;
+    transition: ease all 0.5s;
+  box-shadow: 0 0 10px #00e7ff, 0 0 10px #00e7ff, 0 0 10px #00e7ff;
+  border-radius: 50px;
+  background: #00e7ff;
+}
+
+
+
+#rmbtn:hover {
+    
+  box-shadow: 0 0 0px #11111d, 0 0 0px #11111d, 0 0 0px #11111d;
+ 
+    
+  
+    transition-delay: ease all 1s;
+}
+
+#rbtn {
+  /* position: relative; */
+  display: inline-block;
+  margin-top: 20px;
+  padding: 5px 10px;
+  color: #11111d;
+  /* text-transform: uppercase; */
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-decoration: none;
+  font-size: 20px;
+  overflow: hidden;
+  transition: ease all 0.5s;
+box-shadow: 0 0 10px #00e7ff, 0 0 10px #00e7ff, 0 0 10px #00e7ff;
+border-radius: 50px;
+background: #00e7ff;
+}
+
+
+
+#rbtn:hover {
+  
+box-shadow: 0 0 0px #11111d, 0 0 0px #11111d, 0 0 0px #11111d;
+
+  
+
+  transition-delay: ease all 1s;
+}

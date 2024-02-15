@@ -19,7 +19,7 @@ app.get("/",function(req,resp)
 var dbConfig={
     host:"127.0.0.1",
     user:"root",
-   password:"cgg@65830",
+   password:"",
    database:"portfolio"
 }
 var dbCon=mysql.createConnection(dbConfig);
